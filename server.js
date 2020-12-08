@@ -1,4 +1,5 @@
 //Middleware
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -24,7 +25,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 // Mongoose DB Parameters
-mongoose.connect('mongodb+srv://admin-andrew:Maci&Drew07@cluster0.60mfv.mongodb.net/orderRequestsDB', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(process.env.DB_HOST, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const shirtsSchema = mongoose.Schema({size: String, color: String, complete: Boolean});
 
