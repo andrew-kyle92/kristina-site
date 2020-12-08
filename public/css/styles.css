@@ -293,6 +293,35 @@ td {
 
 /* Website responsiveness */
 @media screen and (max-width: 770px) {
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .edit-btn {
+        display: contents;
+        margin: auto;
+        width: 100%;
+    }
+
+    #myProgress, #progressBar {
+        display: inline-table;
+        margin: auto;
+        width: 75%;
+    }
+
+    .order-form {
+        width: 80%;
+    }
+
+    #new-order {
+        margin: auto;
+        width: 93%
+    }
+}
+
+@media screen and (max-width: 400px){
     .nav{
         display: flex;
         flex-direction: column;
