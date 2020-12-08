@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+<div class="main-content order-edit">
+    <form action="/order/<%= content._id %>/order-edit" method="POST" id="user-edit">
+        <div class="order-edit-title">
+            <input name="id" type="text" hidden="true" value="<%= content._id%>">
+            <h2>Submitted on: <%= content.date.date %></h2>
+            <h1>Order for: <input type="text" value="<%= content.fname %>" name="fname"> <input type="text" value="<%= content.lname %>" name="lname"></h1>
+            <h1>Price: <input type="text" name="price" value="<%= content.price %>"></h1>
+        </div>
+        <hr>
+        <button type="submit" class="save-btn">Save</button>
+        <div class="order-content">
+            <h2>Shirt Sizes & Colors:</h2>
+            <div class="edit-qty">
+                <label for="qty">
+                    Qty:
+                    <input type="number" id="qty-edit" name="qty" value="<%= content.qty %>" min="0">
+                </label>
+            </div>
+            <div class="shirt-qty-edit">
+                <ol id="list-edit">
+                    <% content.shirts.forEach(function(shirt){ %>
+                        <li class="shirtQtyEdit">
+                            <label for="size">
+                                Shirt Size:
+                                <select name="size" class="sizeOfShirt">
+                                    <option value="<%= shirt.size %>"><%= shirt.size %></option>
+                                    <option value="NA">N/A</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="2XL">2XL</option>
+                                    <option value="3XL">3XL</option>
+                                </select>
+                            </label>
+
+                            <label for="color">
+                                Color:
+                                <input type="text" name="color" class="color-edit" value="<%= shirt.color %>">
+                            </label>
+
+                            <label for="delete">
+                                Delete
+                                <input type="checkbox" name="delete" class="delete" value="<%= shirt._id %>">
+                            </label>
+                            <hr>
+                        </li>
+                    <% }); %> 
+                    
+                </ol>
+            </div>
+                
+            <h2 class="notes-edit-h2">Notes:</h2>
+            <textarea name="notes" cols="80" rows="8" form="user-edit"><%= content.notes %></textarea>
+        </div>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

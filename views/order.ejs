@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+<div class="main-content order">
+    <div class="order-title">    
+        <h2>Submitted on: <%= content.date.date %></h2>
+        <h1>Order for: <%= content.fname %> <%= content.lname %></h1>
+        <form id="paid" action="/paid" method="POST">
+            <input name="id" value="<%= content._id %>" hidden="true">
+            <% if(content.paid == true){ %>
+                <h3>Price: <%= content.price %> - Paid? <input type="checkbox" name="paid" checked="checked" onchange="this.form.submit()"></h1>
+            <% } else{ %>
+                <h3>Price: <%= content.price %> - Paid? <input type="checkbox" name="paid" onchange="this.form.submit()"></h1>
+            <% } %> 
+        </form>
+    </div>
+    <hr>
+    <div class="order-info">
+        <a class="edit-btn" href="/order/<%= content._id %>/order-edit">Edit</a>
+        <div id="progressBar">
+            <div id="myProgress"><label for="file">Order progress:</label> 
+                <% var value = 0; %>
+                <% content.shirts.forEach(function(shirt){ %>
+                        <% if(shirt.complete == true){ %>
+                            <% value += 1; %>
+                        <% } %>
+                        <% return value; %> 
+                <% }); %> 
+                <progress id="file" max="<%= content.shirts.length %>" value="<%= value %>"></progress>
+            </div>
+        </div>
+        <div class="order-content">
+            <h2>Shirt Sizes & Colors:</h2>
+                <table>
+                    <tr>
+                        <th>Complete?</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                    </tr>
+                        <% content.shirts.forEach(function(shirt){ %>    
+                            <form action="/complete" method="POST">
+                                <input name="id" value="<%= content._id %>" hidden="true">
+                                <input name="shirtId" value="<%= shirt._id %>" hidden="true">
+                                <tr>
+                                    <% if(shirt.complete === true) {%> 
+                                        <td class="progress"><input type="checkbox" class="complete" name="checkbox" checked="checked" onchange="this.form.submit()"></td>
+                                    <% } else {%>
+                                        <td class="progress"><input type="checkbox" class="complete" name="checkbox" onchange="this.form.submit()"></td>
+                                    <% } %> 
+                                        <td class="shirts">Size: <%= shirt.size %></td>
+                                        <td class="color">Color: <%= shirt.color %></td>
+                                </tr>
+                            </form>
+                        <% }) %>
+                </table>
+            <h2 class="notes-h2">Notes:</h2>
+            <p class="notes-p"><%= content.notes %></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('partials/footer') %>

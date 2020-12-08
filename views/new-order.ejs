@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+<div class="main-content orders">
+    <div class="order-form">
+        <form id="new-order" action="/new-order" method="post">
+            <label for="date">
+                Date:
+                <input type="text" value="<%=date%>" name="date" readonly>
+            </label>
+            <br>
+            <label for="fname">
+                First Name:
+                <input type="text" id="fname" name="fname" placeholder="Kristina" required>
+            </label>
+            
+
+            <label for="lname">
+                Last Name:
+                <input type="text" id="lname" placeholder="Goose" name="lname">
+            </label>
+
+            <label for="price">
+                price:
+                <input type="text" name="price" id="price" value="$">
+            </label>
+
+            <label for="qty">
+                Qty:
+                <input type="number" id="qty" name="qty" value="1" min="1">
+            </label>
+
+            <div class="shirt-qty">
+                <ol id="list">
+                    <li>
+                        <label for="size">
+                            Shirt Size:
+                            <select name="size" id="shirtSize">
+                                <option value="N/A">N/A</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="2XL">2XL</option>
+                                <option value="3XL">3XL</option>
+                            </select>
+                        </label>
+
+                        <label for="color">
+                            Color:
+                            <input type="text" name="color" id="color" placeholder="Color">
+                        </label>
+
+                    </li>
+                </ol>
+            </div>
+            <br>
+
+            <label for="notes">
+                Notes:
+                <br>
+                <textarea name="notes" id="notes" cols="50" rows="5" placeholder="Big booty Goosie"></textarea>
+            </label>
+            <br>
+            <button type="submit" name="button">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('partials/footer') %>

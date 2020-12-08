@@ -1,0 +1,395 @@
+/* General styles */
+html{
+    width: auto;
+}
+
+body {
+    background: #f5d0ed;
+    color: #5e6a6e;
+    font-family: 'Playfair Display', serif;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+}
+
+a {
+    color: #5e6a6e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #97889e;
+}
+
+/* Nav styles */
+.nav {
+    background: #cbe9ee;
+    border-bottom: 1px solid #16854e;
+    display: flex;
+}
+
+.nav-links {
+    align-content: space-between;
+    letter-spacing: 1px;
+    margin: auto 1rem auto auto;
+    width: fit-content;
+}
+
+.nav-links a {
+    font-size: 30px;
+    margin: inherit;
+}
+
+.nav-left {
+    margin: auto auto auto 0rem;
+}
+
+.nav-left a {
+    font-size: 30px;
+}
+
+/* Body styling*/
+.main-content {
+    background: #f7f2f6;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+/* Orders Styling */
+.order-form {
+    margin: auto auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 38%;
+}
+
+.order-form p[name=date] {
+    width: fit-content;
+}
+.order-form button {
+    background: #cbe9ee;
+    border: 1px solid #5e6a6e;
+    border-radius: 5px;
+    color: #404749;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    height: 32px;
+    letter-spacing: 1px;
+    margin: 2rem auto 0rem auto;
+    cursor: pointer;
+    width: 75px;
+}
+
+.order-form button:hover {
+    background: #9ad1db;
+}
+
+#price {
+    width: 10%
+}
+
+.shirt-qty {
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.shirt-qty select input {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.order-form input {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+}
+
+.order-form input[name=qty] {
+    width: 4%;
+}
+
+.order-form select {
+    margin-right: 20px;
+}
+
+.collapsible {
+    background-color: #6b696a;
+    color: #ebebeb;
+    cursor: pointer;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active, .collapsible:hover {
+    background-color: #525051;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f7f2f6;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.inner-collapsible {
+    background-color: #6b696a;
+    color: #ebebeb;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 90%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .inner-collapsible:hover {
+    background-color: #525051;
+}
+
+.inner-collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.inner-active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.inner-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f7f2f6;
+    margin: auto;
+    width: 80%;
+}
+
+.inner-content a {
+    color:#519cffd0;
+}
+
+.inner-content a:hover {
+    color:  #fc3535bb;
+}
+
+/* Order Page */
+
+.main-content.order h1 {
+    width: fit-content;
+}
+
+.main-content.order hr {
+    border: 1px solid black;
+    width: 80%;
+}
+
+.order-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.order-title h1, .order-title h2 {
+    flex-basis: 100%;
+}
+
+.order-title h3 {
+    margin: auto;
+    width: 18%;
+}
+
+#paid {
+    width: 100%;
+}
+
+.order-content table{
+    margin: auto;
+    width: 50%;
+}
+
+.order-content table, th{
+    border: 1px solid black;
+}
+
+.edit-btn {
+    position: absolute;
+    right: 25rem;
+}
+
+.notes-p {
+    background: lightgray;
+    border: 1px solid black;
+    color: black;
+    margin: auto;
+    width: 50%;
+}
+
+td {
+    background: lightgray;
+    border: 1px solid black;
+    color: black;
+}
+.progress {
+    width: 10%;
+}
+
+#progressBar {
+    margin: auto;
+    width: 10%;
+}
+
+#progressBar p {
+    margin: 0rem auto;
+}
+
+#myProgress {
+    width: 100%;
+    height: 20px;
+}
+
+/* Order edit page */
+#note-edit-p {
+    height: 40%;
+    width: fit-content;
+}
+
+.edit-qty {
+    width: fit-content;
+    margin: .5rem auto;
+}
+
+.edit-qty input {
+    width: 12%;
+}
+
+.shirtQtyEdit {
+    margin: auto;
+    width: fit-content;
+}
+
+/* Website responsiveness */
+@media screen and (max-width: 770px) {
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-left {
+        width: fit-content;
+        margin: auto;
+    }
+
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+    }
+
+    #new-order {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .order-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .order-form input[fname], input[lname] {
+        padding-right: 2rem;
+    }
+
+    .order-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edit-btn {
+        display: contents;
+        margin: auto;
+        width: 100%;
+    }
+
+    #myProgress, #progressBar {
+        display: inline-table;
+        margin: auto;
+        width: 75%;
+    }
+
+    textarea#notes {
+        width: 90%;
+    }
+
+    #paid h3{
+        width: 100%;
+    }
+
+    .notes-p {
+        width: 95%;
+    }
+
+    .order-edit-title {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .order-edit-title h1 {
+        width: 100%;
+    }
+
+    .order-edit-title h1#text {
+        margin: auto;
+    }
+
+    .order-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .shirtQtyEdit {
+        width: 100%;
+    }
+
+    .shirtQtyEdit label[for="size"] {
+        margin-right: 52%;
+    }
+
+    #list label {
+        width: 100%;
+    }
+}

@@ -1,0 +1,178 @@
+<%- include('partials/header') %>
+
+<div class="main-content orders">
+    <button type="button" class="collapsible">2021</button>
+    <div class="content">
+        <button type="button" class="inner-collapsible">December</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <%  %> 
+                <% if(order.date.month === "Mar" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">November</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Nov" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">October</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Oct" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">September</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Sep" && order.date.year === "2021"){ %>
+                    <hr>
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">August</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Aug" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">July</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Jul" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">June</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Jun" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">May</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "May" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">April</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Apr" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">March</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Mar" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">February</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Feb" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                    <hr>
+                <% } %>
+            <% }); %>
+        </div>
+        <button type="button" class="inner-collapsible">January</button>
+        <div class="inner-content">
+            <% orders.forEach(function(order) { %>
+                <% if(order.date.month === "Jan" && order.date.year === "2021"){ %>
+                    <hr> 
+                        <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a></p>
+                <% } %> 
+            <% }); %>
+        </div>
+    </div>
+    <button type="button" class="collapsible">2020</button>
+    <div class="content">
+        <button type="button" class="inner-collapsible">December</button>
+            <div class="inner-content">
+                <% orders.forEach(function(order) { %>
+                    <% var paid = "No"; %> 
+                    <% if(order.paid){ %>
+                        <% paid = "Yes"; %>
+                    <% } %> 
+                    <% if(order.date.month === "Dec" && order.date.year === "2020"){ %> 
+                        <hr>
+                            <p>Date: <a href="order/<%= order._id %>"><%= order.date.date %></a> Name: <a href="order/<%= order._id %>"><%= order.fname %> <%= order.lname %></a> Amount: <%= order.price%> Paid? <%= paid %></p>
+                    <% } %> 
+                <% }); %>
+            </div>
+        <button type="button" class="inner-collapsible">November</button>
+            <div class="inner-content">
+            </div>
+        <button type="button" class="inner-collapsible">October</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">September</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">August</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">July</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">June</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">May</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">April</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">March</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">February</button>
+            <div class="inner-content">
+
+            </div>
+        <button type="button" class="inner-collapsible">January</button>
+            <div class="inner-content">
+
+            </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
