@@ -292,6 +292,12 @@ td {
 }
 
 /* Website responsiveness */
+@media screen and (max-width: 1680px){
+    .order-form {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 770px) {
     .main-content{
         display: flex;
